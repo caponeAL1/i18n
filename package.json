@@ -4,9 +4,20 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:tm": "ng serve --configuration=tm",
+    "start:hi": "ng serve --configuration=hi",
+    "start:ka": "ng serve --configuration=ka",
+    "start:tl": "ng serve --configuration=tl",
+    "start:ml": "ng serve --configuration=ml",
     "build": "ng build",
+    "build:tm": "ng build --configuration=tm",
+    "build:hi": "ng build --configuration=hi",
+    "build:ka": "ng build --configuration=ka",
+    "build:tl": "ng build --configuration=tl",
+
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "i18n:extract": "ng extract-i18n  --output-path src/locale"
   },
   "private": true,
   "dependencies": {
@@ -15,6 +26,7 @@
     "@angular/compiler": "^16.2.0",
     "@angular/core": "^16.2.0",
     "@angular/forms": "^16.2.0",
+    "@angular/localize": "^16.2.10",
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",

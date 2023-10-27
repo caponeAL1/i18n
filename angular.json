@@ -5,6 +5,31 @@
   "projects": {
     "i18n": {
       "projectType": "application",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ml": {
+            "translation": "src/locale/messages.ml.xlf",
+            "baseHref": ""
+          },
+          "ka": {
+            "translation": "src/locale/messages.ka.xlf",
+            "baseHref": ""
+          },
+          "tl": {
+            "translation": "src/locale/messages.tl.xlf",
+            "baseHref": ""
+          },
+          "tm": {
+            "translation": "src/locale/messages.tm.xlf",
+            "baseHref": ""
+          },
+          "hi": {
+            "translation": "src/locale/messages.hi.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "schematics": {
         "@schematics/angular:class": {
           "skipTests": true
@@ -37,6 +62,7 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
+         
           "options": {
             "outputPath": "dist/i18n",
             "index": "src/index.html",
@@ -70,6 +96,32 @@
               ],
               "outputHashing": "all"
             },
+            "ml" : {
+              "localize": ["ml"],
+              "outputPath": "dist/under-construction-ml/",
+              "i18nMissingTranslation": "error"
+            },
+            "ka": {
+              "localize": ["ka"],
+              "outputPath": "dist/under-construction-ka/",
+              "i18nMissingTranslation": "error"
+            },
+            "tl": {
+              "localize": ["tl"],
+              "outputPath": "dist/under-construction-tl/",
+              "i18nMissingTranslation": "error"
+            },
+            "tm": {
+              "localize": ["tm"],
+              "outputPath": "dist/under-construction-tm/",
+              "i18nMissingTranslation": "error"
+            },
+            "hi": {
+              "localize": ["hi"],
+              "outputPath": "dist/under-construction-hi/",
+              "i18nMissingTranslation": "error"
+            },
+            
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -86,6 +138,21 @@
           "configurations": {
             "production": {
               "browserTarget": "i18n:build:production"
+            },
+            "ml": {
+              "browserTarget": "i18n:build:ml"
+            },
+            "tl": {
+              "browserTarget": "i18n:build:tl"
+            },
+            "ka": {
+              "browserTarget": "i18n:build:ka"
+            },
+            "tm": {
+              "browserTarget": "i18n:build:tm"
+            },
+            "hi": {
+              "browserTarget": "i18n:build:hi"
             },
             "development": {
               "browserTarget": "i18n:build:development"
